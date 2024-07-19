@@ -1,0 +1,9 @@
+apiVersion: core.krateo.io/v1alpha1
+kind: CompositionDefinition
+metadata:
+  name: compositiondefinition-${ .Release.name }-${ .Release.namespace }
+  namespace: demo-system
+spec:
+  {{- with .Values.chart }}
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
