@@ -1,7 +1,7 @@
 apiVersion: core.krateo.io/v1alpha1
 kind: CompositionDefinition
 metadata:
-  name: compositiondefinition-{{ .Release.Name }}-{{ .Release.Namespace }}
+  name: {{ .Release.Name }}
   namespace: {{ .Release.Namespace }}
 spec:
   {{- with .Values.chart }}

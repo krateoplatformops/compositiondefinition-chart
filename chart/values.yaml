@@ -8,7 +8,7 @@ chart:
 
   # when helm is in a registry
   url: https://charts.krateo.io
-  version: "1.0.11"
+  version: 1.0.19
   repo: fireworks-app
 
 
@@ -20,3 +20,9 @@ chart:
   #     key: token
   #     name: helm-registry-token
   #     namespace: krateo-system
+
+card:
+  icon: fa-cubes
+  title: FireworksApp
+  color: blue
+  content: This is a card for FireworksApp template

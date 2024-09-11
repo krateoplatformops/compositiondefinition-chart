@@ -1,0 +1,33 @@
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: template-{{ .Release.Name }}-card
+  namespace: {{ .Release.Namespace }}
+data:
+  panel: "true"
+---
+apiVersion: templates.krateo.io/v1alpha1
+kind: Widget
+metadata:
+  annotations:
+    "krateo.io/verbose-api": "true"
+  name: template-{{ .Release.Name }}-card
+  namespace: {{ .Release.Namespace }}
+spec:
+  type: card
+  propsRef:
+    name: template-{{ .Release.Name }}-card
+    namespace: {{ .Release.Namespace }}
+  actions:
+  - template:
+      apiVersion: templates.krateo.io/v1alpha1
+      resource: form
+      name: template-{{ .Release.Name }}-form
+      namespace: {{ .Release.Namespace }}
+  app:
+    template:
+    {{- with .Values.card }}
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+      tags: {{ .Release.Namespace }}
