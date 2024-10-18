@@ -1,10 +1,13 @@
 chart:
   # when helm is a tgz
   # url: https://github.com/krateoplatformops/krateo-v2-template-fireworksapp/releases/download/0.1.0/fireworks-app-0.1.0.tgz
+  # repo: null
+  # version: null
 
   # when helm is a OCI image
   # url: oci://registry-1.docker.io/bitnamicharts/postgresql
   # version: "12.8.3"
+  # repo: null
 
   # when helm is in a registry
   url: https://charts.krateo.io
