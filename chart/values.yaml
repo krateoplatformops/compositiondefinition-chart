@@ -8,7 +8,7 @@ chart:
 
   # when helm is in a registry
   url: https://charts.krateo.io
-  version: 1.0.19
+  version: 1.1.8
   repo: fireworks-app
 
 
@@ -26,3 +26,4 @@ card:
   title: FireworksApp
   color: blue
   content: This is a card for FireworksApp template
+  tags: "1.1.8"

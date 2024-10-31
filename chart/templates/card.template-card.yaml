@@ -30,4 +30,4 @@ spec:
     {{- with .Values.card }}
       {{- toYaml . | nindent 6 }}
     {{- end }}
-      tags: {{ .Release.Namespace }}
+      tags: {{ .Release.Namespace }},{{ .Values.card.tags }}
